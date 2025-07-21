@@ -2,6 +2,7 @@ import cv2
 face_cap = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 vid_cap = cv2.VideoCapture(0)
 while True:
+    hari=10
     r,v = vid_cap.read()
     col=cv2.cvtColor(v,cv2.COLOR_BGRA2GRAY)
     facess = face_cap.detectMultiScale(col,1.1,5,cv2.CASCADE_SCALE_IMAGE,(30,30))
